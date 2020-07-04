@@ -1,7 +1,18 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Store from './components/Store/Store';
+import Store from './components/LunchStore/LunchStore';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import LunchStore from './components/LunchStore/LunchStore';
+import NotFound from './components/NotFound/NotFound';
+import DinnerStore from './components/DinnerStore/DinnerStore';
+import BreakFastStore from './components/BreakFastStore/BreakFastStore';
 
 
 function App() {
@@ -9,7 +20,25 @@ function App() {
 	return (
 		<div className="App">
 			<Header></Header>
-			<Store></Store>
+			<Router>
+				<Switch>
+					<Route path="/breakfast">
+						<BreakFastStore></BreakFastStore>
+					</Route>
+					<Route path="/lunch">
+						<LunchStore></LunchStore>
+					</Route>
+					<Route exact path="/">
+						<LunchStore></LunchStore>
+					</Route>
+					<Route path="/dinner">
+						<DinnerStore></DinnerStore>
+					</Route>
+					<Route path="*">
+						<NotFound></NotFound>
+					</Route>
+				</Switch>
+			</Router>
 		</div>
 	);
 }

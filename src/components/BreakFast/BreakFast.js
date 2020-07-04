@@ -1,9 +1,8 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
-const Dinner = (props) => {
-   
-    const {name, price, img} = props.dinner;
+const BreakFast = (props) => {
+    const {name, price, img} = props.breakfast;
 
     return (
         <div className="lunches">
@@ -21,4 +20,4 @@ const Dinner = (props) => {
     );
 };
 
-export default Dinner;
+export default BreakFast;
