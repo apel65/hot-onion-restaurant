@@ -14,6 +14,7 @@
 
 .h2-size {
     font-weight: 500;
+    display: inline;
 }
 
 .addBtn {
@@ -28,11 +29,30 @@
 
 .addBtn:hover{
     background: #d83838;  
-    color: #fff;
-    text-decoration: none;
+    color: #fff; 
 }
 
-.addBtn:active{
-    outline: none;
-    border: none;
+.itemCount {
+    padding: 5px 30px;
+    margin-left: 30px;
+    font-size: 25px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    text-align: center;
+    color: #000;
+    display: inline;
+}
+
+.minusBtn {
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+.plusBtn {
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 45px;
+    margin-left: 10px;
 }
