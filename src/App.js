@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Store from './components/LunchStore/LunchStore';
 
 import {
   BrowserRouter as Router,
@@ -13,6 +12,7 @@ import LunchStore from './components/LunchStore/LunchStore';
 import NotFound from './components/NotFound/NotFound';
 import DinnerStore from './components/DinnerStore/DinnerStore';
 import BreakFastStore from './components/BreakFastStore/BreakFastStore';
+import LunchDetails from './components/LunchDetails/LunchDetails';
 
 
 function App() {
@@ -33,6 +33,9 @@ function App() {
 					</Route>
 					<Route path="/dinner">
 						<DinnerStore></DinnerStore>
+					</Route>
+					<Route path="/lunches/:lunchKey">
+						<LunchDetails></LunchDetails>
 					</Route>
 					<Route path="*">
 						<NotFound></NotFound>

@@ -1,0 +1,38 @@
+.top-size {
+    margin-top: 5%;
+    height: 600px;
+    line-height: 2rem;
+}
+
+.gray {
+    color: gray;
+}
+
+.h1-size {
+    font-size: 3rem;
+}
+
+.h2-size {
+    font-weight: 500;
+}
+
+.addBtn {
+    padding: 5px 30px;
+    border: none;
+    background: red;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    outline: none;
+}
+
+.addBtn:hover{
+    background: #d83838;  
+    color: #fff;
+    text-decoration: none;
+}
+
+.addBtn:active{
+    outline: none;
+    border: none;
+}

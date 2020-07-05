@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import fakeData from '../../fakeData';
 import Lunch from '../Lunch/Lunch';
-import Dinner from '../Dinner/Dinner';
 
 const LunchStore = () => {
     
     const [foods, setFoods] = useState(fakeData);
-
     const lunches = foods.filter(food => food.category === 'lunch');
     
     return (

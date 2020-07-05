@@ -8,6 +8,7 @@
 
 .item {
     padding: 1%;
+    cursor: pointer;
     text-align: center;
     float: left;
     height: 330px;

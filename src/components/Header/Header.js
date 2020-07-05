@@ -21,7 +21,7 @@ const Header = () => {
            <div className="header2">
                 <nav>
                     <a href="/breakfast">Breakfast</a>
-                    <a href="/lunch">Lunch</a>
+                    <a href="/lunch" className="active">Lunch</a>
                     <a href="/dinner">Dinner</a>
                 </nav>
            </div>
