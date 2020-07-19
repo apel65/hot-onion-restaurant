@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import fakeData from '../../fakeData';
 import Lunch from '../Lunch/Lunch';
+import fakeData from '../../fakeData';
+import CheckoutBtn from '../CheckoutBtn/CheckoutBtn';
 
 const LunchStore = () => {
-    
-    const [foods, setFoods] = useState(fakeData);
-    const lunches = foods.filter(food => food.category === 'lunch');
-
+    const [foods, setFoods] = useState(fakeData)
+    const lunch = foods.filter(food => food.category === 'lunch');
     return (
         <div>
-            <div className="lunch-section">
-                {
-                    lunches.map(lunch => <Lunch key={lunch.key} lunch={lunch}></Lunch>)
-                }
+            {
+                lunch.map(lunch => <Lunch key={lunch.key} lunch={lunch}></Lunch>)
+            }
+            <div className="text-center">
+                <CheckoutBtn></CheckoutBtn>
             </div>
-        </div>
+        </div> 
     );
 };
 

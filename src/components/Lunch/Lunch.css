@@ -1,29 +1,20 @@
-.lunches img {
-    width: 200px;
-}
-.lunches {
+.lunch-container {
     margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.lunch-container img{
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.align-items{
+    text-align: center;
+    padding: 20px 0 20px 0px;
     
 }
 
-.item {
-    padding: 1%;
-    cursor: pointer;
-    text-align: center;
-    float: left;
-    height: 330px;
-    transition: all .4s ease;
-}
-
-.item:hover {
-    box-shadow: 3px 3px 10px lightgray;
-
-}
-
-.item p{
-    color: gray;
-}
-
-.detail {
-    margin-top: 5%;
+.align-items:hover {
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px lightgray;
 }

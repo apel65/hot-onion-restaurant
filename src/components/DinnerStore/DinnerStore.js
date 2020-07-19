@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import fakeData from '../../fakeData';
 import Dinner from '../Dinner/Dinner';
+import CheckoutBtn from '../CheckoutBtn/CheckoutBtn';
 
 const DinnerStore = () => {
-
-    const [foods, setFoods] = useState(fakeData);
-
-    const dinners = foods.filter(food => food.category === 'Dinner');
-    
+    const [foods, setFoods] = useState(fakeData)
+    const dinner = foods.filter(food => food.category === 'Dinner');
     return (
         <div>
-            <div className="dinner-section">
+             <div>
                 {
-                    dinners.map(dinner => <Dinner dinner={dinner}></Dinner>)
+                    dinner.map(dinner => <Dinner key={dinner.key} dinner={dinner}></Dinner>)
                 }
+                <div className="text-center">
+                    <CheckoutBtn></CheckoutBtn>
+                </div>
             </div>
         </div>
     );

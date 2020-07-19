@@ -1,53 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import LunchStore from './components/LunchStore/LunchStore';
 import Header from './components/Header/Header';
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import LunchStore from './components/LunchStore/LunchStore';
 import NotFound from './components/NotFound/NotFound';
-import DinnerStore from './components/DinnerStore/DinnerStore';
-import BreakFastStore from './components/BreakFastStore/BreakFastStore';
-import LunchDetails from './components/LunchDetails/LunchDetails';
-import DinnerDetails from './components/DinnerDetails/DinnerDetails';
-import BreakFastDetails from './components/BreakFastDetails/BreakFastDetails';
+import FoodDetail from './components/FoodDetail/FoodDetail';
 import Cart from './components/Cart/Cart';
-
+import DinnerStore from './components/DinnerStore/DinnerStore';
+import BreakfastStore from './components/BreakfastStore/BreakfastStore';
 
 
 function App() {
-
-	const [cart, setCart] = useState([]);
 	
 	return (
 		<div className="App">
 			<Header></Header>
 			<Router>
 				<Switch>
-					<Route path="/breakfast">
-						<BreakFastStore></BreakFastStore>
+					<Route path='/breakfast'>
+						<BreakfastStore></BreakfastStore>
 					</Route>
-					<Route path="/lunch">
+					<Route path='/lunch'>
 						<LunchStore></LunchStore>
 					</Route>
-					<Route exact path="/">
+					<Route exact path='/'>
 						<LunchStore></LunchStore>
 					</Route>
-					<Route path="/dinner">
+					<Route path='/dinner'>
 						<DinnerStore></DinnerStore>
 					</Route>
-					<Route path="/breakfastes/:breakFastKey">
-						<BreakFastDetails></BreakFastDetails>
-					</Route>
-					<Route path="/lunches/:lunchKey">
-						<LunchDetails cart={cart} setCart={setCart}></LunchDetails>
-					</Route>
-					<Route path="/dinners/:dinnerKey">
-						<DinnerDetails></DinnerDetails>
+					<Route path="/foodDetails/:foodKey">
+						<FoodDetail></FoodDetail>
 					</Route>
 					<Route path="/cart">
 						<Cart></Cart>

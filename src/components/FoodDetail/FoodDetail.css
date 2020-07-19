@@ -1,0 +1,26 @@
+.food-quantity {
+    border: 1px solid lightgray;
+    border-radius: 45px;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+.food-quantity button {
+    margin: 0 5px;
+    border: none;
+    background: #fff;
+}
+
+.main-btn {
+    border: none;
+    border-radius: 45px;
+    padding: 5px 35px;
+    font-size: 1.5rem;
+    
+}
+
+.main-btn:focus {
+    border: none;
+    outline: none;
+}
