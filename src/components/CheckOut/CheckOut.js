@@ -4,9 +4,11 @@ import { getDatabaseCart } from '../../utilities/databaseManager';
 import fakeData from '../../fakeData';
 import { useState } from 'react';
 import Cart from '../Cart/Cart';
+import Form from '../Form/Form';
+import './CheckOut.css';
 
 
-const PlaceOrder = () => {
+const CheckOut = () => {
     
     const [foods, setFoods] = useState([]);
 
@@ -22,20 +24,21 @@ const PlaceOrder = () => {
     },[])
 
     return (
-        <div className="container">
+        <div className="container margin-top">
            <div className="row align-items-center">
-                <div className="form-container col-md-6">
-                    <h1>This is and form container</h1>
-                </div>
 
-                <div className="cart-container col-md-6 mt-5">
+                <div className="form-container col-md-6">
+                    <Form></Form>
+                </div>
+                <div className="cart-container col-md-6">
                    {
                      <Cart foods={foods}></Cart>
                    }
                 </div>
+
            </div>
         </div>
     );
 };
 
-export default PlaceOrder;
+export default CheckOut;

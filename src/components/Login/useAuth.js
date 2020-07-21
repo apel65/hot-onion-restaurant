@@ -57,7 +57,6 @@ const Auth = () => {
             return res.user;
         })
         .catch(err => {
-            // console.log(err)
             setUser(null);
             return err.message;
         })
@@ -67,9 +66,11 @@ const Auth = () => {
         firebase.auth().signOut()
         .then(res => {
         setUser(null);
+        return true;
         })
         .catch( err => {
-        // An error happened.
+         console.log(err);
+         return false;
         });
     }
 

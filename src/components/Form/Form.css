@@ -1,0 +1,14 @@
+
+.user-form input {
+    margin-top: 10px;
+    border: none;
+    background: #ddd;
+}
+
+.edit-deliver {
+    font-size: 25px;
+    font-weight: 400;
+    border-bottom: 1.5px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}

@@ -2,12 +2,11 @@ import React from 'react';
 import logo from "../../Image/logo2.png";
 import './Header.css';
 import { useAuth } from '../Login/useAuth';
-import { Router, Route, Link } from 'react-router-dom';
-import PlaceOrder from '../PlaceOrder/PlaceOrder';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
-    const auth = useAuth();    
+    const auth = useAuth();
     
     return (
         <div>
@@ -21,16 +20,17 @@ const Header = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="ml-auto navbar-nav">
-                        {/* <button>Cart</button> */}
-
                         
-                        <Link to="/placeorder">
+                        <Link to="/checkout">
                         Cart
                         </Link>
-                        <a className="nav-item nav-link" href="/login">Login</a>
                         {
                             auth.user ? <span>{auth.user.name}</span>:
-                            <a href="/login">Sign Up</a>
+                            <a href="/login">Login</a>
+                        }
+                        {
+                            auth.user ? <button onClick={auth.signOut}>Sign Up</button>:
+                            <a href="/login">Sign In</a>
                         }
                         </div>
                         

@@ -1,5 +1,7 @@
 import React from 'react';
 import Auth from './useAuth';
+import './Login.css';
+import logo from '../../Image/logo2.png';
 
 const Login = () => {
 
@@ -13,11 +15,18 @@ const Login = () => {
     }
 
     return (
-        <div>
-           {
-               auth.user ? <button onClick={auth.signOut}>Sign Out</button>:
-               <button onClick={handleSignedIn}>Sign in with google</button>
-           }
+        <div className="login-container">
+            <div className="sign-area">
+                <div>
+                    <img src={logo} alt=""/>
+                </div>
+                <div >
+                    {
+                        auth.user ? <button className="sign-btn" onClick={auth.signOut}>Sign Out</button>:
+                        <button className="sign-btn" onClick={handleSignedIn}>Sign in with google</button>
+                    }
+                </div>
+            </div>
         </div>
     );
 };

@@ -15,7 +15,7 @@ import BreakfastStore from './components/BreakfastStore/BreakfastStore';
 import Login from './components/Login/Login';
 import Banner from './components/Banner/Banner';
 import { AuthContextProvider, PrivateRoute } from './components/Login/useAuth';
-import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import CheckOut from './components/CheckOut/CheckOut';
 
 
 function App() {
@@ -43,8 +43,8 @@ function App() {
 						<Route path="/foodDetails/:foodKey">
 							<FoodDetail></FoodDetail>
 						</Route>
-						<PrivateRoute path="/placeorder">
-							<PlaceOrder></PlaceOrder>
+						<PrivateRoute path="/checkout">
+							<CheckOut></CheckOut>
 						</PrivateRoute>
 						<Route path="/login">
 							<Login></Login>
