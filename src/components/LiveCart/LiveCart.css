@@ -1,0 +1,10 @@
+.table-wrapper table{
+    width: 300px;
+    margin: 5px;
+    border-radius: 10px;
+    background: #ddd;
+}
+
+.cart-img{
+   height: 80px;
+}

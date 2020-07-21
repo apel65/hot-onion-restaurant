@@ -10,11 +10,10 @@ const FoodDetail = () => {
     const {img, category, price} = food;
     
     const [count, setCount] = useState(1);
-
+    
     const handleAddFood = (product) => {
         const quantity = product.quantity = count;
         addToDatabaseCart(product.key, quantity)
-        console.log(product);
     }
 
     return (
@@ -29,7 +28,7 @@ const FoodDetail = () => {
                             <h2>${price}</h2>
                         </div>
                         <div className="food-quantity">
-                            <button onClick={() => setCount(count - 1)}>-</button>
+                            <button onClick={() => setCount(Math.max(count - 1,1))}>-</button>
                             <span>{count}</span>
                             <button onClick={() => setCount(count + 1)}>+</button>
                         </div>

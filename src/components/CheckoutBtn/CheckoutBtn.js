@@ -1,10 +1,13 @@
 import React from 'react';
 import './CheckoutBtn.css';
+import { Link } from 'react-router-dom';
 
 const CheckoutBtn = () => {
     return (
         <div>
-            <button className="check-btn">Checkout Your Food</button>
+            <Link to="/placeorder">
+                <button className="check-btn">Checkout Your Food</button>
+            </Link>
         </div>
     );
 };

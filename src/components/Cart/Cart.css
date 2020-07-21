@@ -1,48 +1,17 @@
-
-.cart-shape img{
-    height: 50px;
-}
-
-.cart-shape table {
-    font-size: 12px;
-    background: lightgray;
-    margin-bottom: 5px;
-    border-radius: 10px;
+.cart-bottom table{
     width: 300px;
 }
 
-.cart-shape table tr td {
-    padding: 10px;
-    text-align: left;
+.align-right {
+    text-align: right;
 }
 
 .place-order {
     background: lightgray;
-    color: #fff;
-    width: 300px;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-.place-order{
-    background: lightgray;
     padding: 5px;
     width: 300px;
-    margin: 20px 0 10px 0;
+    margin: 50px 0 50px 0;
     border: none;
     border-radius: 5px;
     color: #fff;
-}
-
-.place-order:active {
-   background: gray;
-}
-
-.place-order:focus {
-    outline: none;
-    border: none;
-}
-
-.margin-top {
-    margin-top: 50px;
 }

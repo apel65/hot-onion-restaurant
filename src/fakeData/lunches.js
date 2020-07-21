@@ -8,7 +8,7 @@ var lunches = [
 	},
 	{
 		'key': 'M4NN809M',
-		'name': 'Honey-Soy-Glazed Salmon with pappers',
+		'name': 'Honey Soy Glazed Salmon with pappers',
 		'category': 'lunch',
 		'price': 14.9,
 		'img': 'https://i.imgur.com/8EFawRm.png',
