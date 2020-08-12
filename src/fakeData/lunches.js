@@ -4,7 +4,7 @@ var lunches = [
 		'name': 'Beef Steak',
 		'category': 'lunch',
 		'price': 8.9,
-		'img': 'https://i.imgur.com/qPouao2.png',
+		'img': 'https://i.imgur.com/eWfGJXU.png',
 	},
 	{
 		'key': 'M4NN809M',
@@ -32,14 +32,14 @@ var lunches = [
 		'name': 'Fried Chicken Bento',
 		'category': 'lunch',
 		'price': 11.87,
-		'img': 'https://i.imgur.com/FoiCLFO.png',
+		'img': 'https://i.imgur.com/WlrfCdi.png',
 	},
 	{
 		'key': 'P09HL8LH4',
 		'name': 'Healthy Meal Plan',
 		'category': 'lunch',
 		'price': 23.33,
-		'img': 'https://i.imgur.com/Z2piB8S.png',
+		'img': 'https://i.imgur.com/DW5Ka17.png',
 	},
 ];
 

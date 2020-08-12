@@ -1,19 +1,36 @@
+.navbar {
+    z-index: 5;
+}
+
 .navbar-brand img{
     height: 45px;
 }
 
-.second-nav {
-    margin-top: 50px;
-    text-align: center;
+.list {
+    list-style: none;
 }
 
-.second-nav a{
+.list li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.signUpBtn {
+    border: none;
+    border-radius: 40px;
+    padding: 3px 15px;
+    color: white;
+}
+
+.signInBtn {
+    border: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+.signInBtn:hover {
     text-decoration: none;
-    margin-right: 40px;
-    color: black;
-}
-
-.second-nav a:hover {
-    color: red;
-    
+    color: white;
 }

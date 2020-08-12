@@ -5,7 +5,8 @@ import './Cart.css';
 const Cart = (props) => {
     const existingFood = props.foods;
     
-    const total = existingFood.reduce((total, fd) => total + fd.price * fd.quantity,0);
+    const total = existingFood.reduce((total, fd) => total + fd.price * fd.quantity, 0);
+    const foodQuantity = existingFood.reduce((totalQuantity, fd) => totalQuantity + fd.quantity, 0);
 
     const tax = total/10;
     let deliveryFee = 0;
@@ -44,7 +45,7 @@ const Cart = (props) => {
                     <tbody>
                         <tr>
                             <td>Subtotal.</td>
-                            <td className="align-right">{existingFood.length} item ${formateNumber(total)}</td>
+                            <td className="align-right">{foodQuantity} item ${formateNumber(total)}</td>
                         </tr>
                         <tr>
                             <td>Tax</td>

@@ -1,0 +1,15 @@
+
+.second-nav {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.second-nav a{
+    text-decoration: none;
+    margin-right: 40px;
+    color: black;
+}
+
+.second-nav a:hover {
+    color: red; 
+}

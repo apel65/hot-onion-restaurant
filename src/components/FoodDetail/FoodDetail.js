@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import fakeData from '../../fakeData';
 import './FoodDetail.css';
 import { addToDatabaseCart } from '../../utilities/databaseManager';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 const FoodDetail = () => {
     const { foodKey } = useParams();
@@ -14,6 +16,7 @@ const FoodDetail = () => {
     const handleAddFood = (product) => {
         const quantity = product.quantity = count;
         addToDatabaseCart(product.key, quantity)
+        window.location.reload();
     }
 
     return (
@@ -34,7 +37,9 @@ const FoodDetail = () => {
                         </div>
                     </div>
                     <br/>
-                    <button onClick={() => handleAddFood(food)} className="main-btn btn-danger">Add</button>
+                    <button onClick={() => handleAddFood(food)} className="main-btn btn-danger">
+                        <FontAwesomeIcon className="icon" icon={faCartPlus}/>
+                        Add</button>
                 </div>
                 <div className="col-md-6">
                     <img className="img-fluid w-100%" src={img} alt=""/>

@@ -13,9 +13,11 @@ import FoodDetail from './components/FoodDetail/FoodDetail';
 import DinnerStore from './components/DinnerStore/DinnerStore';
 import BreakfastStore from './components/BreakfastStore/BreakfastStore';
 import Login from './components/Login/Login';
-import Banner from './components/Banner/Banner';
 import { AuthContextProvider, PrivateRoute } from './components/Login/useAuth';
 import CheckOut from './components/CheckOut/CheckOut';
+import BannerSection from './components/BannerSection/BannerSection';
+import HeaderTwo from './components/HeaderTwo/HeaderTwo';
+import AboutUs from './components/AboutUs/AboutUs';
 
 
 function App() {
@@ -23,10 +25,10 @@ function App() {
 	return (
 		<div className="App">
 			<AuthContextProvider>
-				
-				{/* <Banner></Banner> */}
 				<Router>
 				<Header></Header>
+				<BannerSection></BannerSection>
+				<HeaderTwo></HeaderTwo>
 					<Switch>
 						<Route path='/breakfast'>
 							<BreakfastStore></BreakfastStore>
@@ -53,6 +55,7 @@ function App() {
 							<NotFound></NotFound>
 						</Route>
 					</Switch>
+					<AboutUs></AboutUs>
 				</Router>
 			</AuthContextProvider>
 		</div>
