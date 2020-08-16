@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import fakeData from '../../fakeData';
 import './FoodDetail.css';
 import { addToDatabaseCart } from '../../utilities/databaseManager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import { useEffect } from 'react';
+
 
 const FoodDetail = () => {
     const { foodKey } = useParams();
-    const food = fakeData.find(food => food.key === foodKey);
-    const {img, category, price} = food;
-    
+    const [food, setFood] = useState(null);
+
+    useEffect(() => {
+        fetch('http://localhost:4200/food/'+ foodKey)
+        .then(res => res.json())
+        .then(data => setFood(data))
+    }, [])
+
+    if(food){
+        var {img, category, price} = food;
+    }
+
     const [count, setCount] = useState(1);
-    
     const handleAddFood = (product) => {
         const quantity = product.quantity = count;
         addToDatabaseCart(product.key, quantity)

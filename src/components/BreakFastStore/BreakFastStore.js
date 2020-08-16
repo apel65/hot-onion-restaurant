@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
-import fakeData from '../../fakeData';
+import React, { useState, useEffect } from 'react';
 import BreakFast from '../BreakFast/BreakFast';
 import './BreakfastStore.css';
 import CheckoutBtn from '../CheckoutBtn/CheckoutBtn';
 
 const BreakfastStore = () => {
-    const [foods, setFoods] = useState(fakeData)
+    const [foods, setFoods] = useState([]);
+    
+    useEffect(() => {
+        fetch('http://localhost:4200/foods')
+        .then(res => res.json())
+        .then(data => setFoods(data));
+    }, [])
+
     const breakfast = foods.filter(food => food.category === 'breakfast');
     return (
         <div className="container">

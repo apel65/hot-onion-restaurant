@@ -3,7 +3,7 @@ import LiveCart from '../LiveCart/LiveCart';
 import './Cart.css';
 
 const Cart = (props) => {
-    const existingFood = props.foods;
+    const existingFood = props.cart;
     
     const total = existingFood.reduce((total, fd) => total + fd.price * fd.quantity, 0);
     const foodQuantity = existingFood.reduce((totalQuantity, fd) => totalQuantity + fd.quantity, 0);

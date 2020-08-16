@@ -6,26 +6,33 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { getDatabaseCart } from '../../utilities/databaseManager';
-import fakeData from '../../fakeData';
 import { useState } from 'react';
 
 const Header = () => {
     const auth = useAuth();
-
+    const [navCart, setNavCart] = useState([]);
     const [foods, setFoods] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:4200/foods')
+        .then(res => res.json())
+        .then(data => setFoods(data))
+    }, [])
 
     useEffect(() => {
         const saveCart = getDatabaseCart();
         const foodKeys = Object.keys(saveCart);
-        const existingFood = foodKeys.map(existingKey => {
-            const food = fakeData.find(fd => fd.key === existingKey);
-            food.quantity = saveCart[existingKey];
-            return food;
-        })
-        setFoods(existingFood);
-    },[])
+        if(foods.length > 0){
+            const existingFood = foodKeys.map(existingKey => {
+                const food = foods.find(fd => fd.key === existingKey);
+                food.quantity = saveCart[existingKey];
+                return food;
+            })
+            setNavCart(existingFood);
+        } 
+    },[foods])
     
-    const foodQuantity = foods.reduce((totalQuantity, fd) => totalQuantity + fd.quantity, 0);
+    const foodQuantity = navCart.reduce((totalQuantity, fd) => totalQuantity + fd.quantity, 0);
 
     return (
         <div>

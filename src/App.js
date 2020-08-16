@@ -18,6 +18,7 @@ import CheckOut from './components/CheckOut/CheckOut';
 import BannerSection from './components/BannerSection/BannerSection';
 import HeaderTwo from './components/HeaderTwo/HeaderTwo';
 import AboutUs from './components/AboutUs/AboutUs';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
 						</Route>
 					</Switch>
 					<AboutUs></AboutUs>
+					<Footer></Footer>
 				</Router>
 			</AuthContextProvider>
 		</div>

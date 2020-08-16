@@ -1,0 +1,34 @@
+.footer-section {
+    background: #191919;
+    height: 30%;
+    padding: 30px;
+}
+
+.margin-top {
+font-size: 14px;
+   margin-top: 8%;
+}
+
+.margin-top a {
+    color: white;
+}
+
+.margin-top a:hover {
+    text-decoration: none;
+    color: #b2b6b2;
+}
+
+.footer-list-item {
+    list-style-type: none;
+}
+
+.footer-list-item li a {
+    font-size: 14px;
+    color: white;
+    transition: all .3s ease;
+}
+
+.footer-list-item li a:hover {
+    text-decoration: none;
+    color: #b2b6b2;
+}

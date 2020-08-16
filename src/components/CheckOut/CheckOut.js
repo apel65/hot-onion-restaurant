@@ -1,27 +1,33 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { getDatabaseCart } from '../../utilities/databaseManager';
-import fakeData from '../../fakeData';
 import { useState } from 'react';
 import Cart from '../Cart/Cart';
 import Form from '../Form/Form';
 import './CheckOut.css';
 
-
 const CheckOut = () => {
-    
+    const [cart, setCart] = useState([]);
     const [foods, setFoods] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:4200/foods')
+        .then(res => res.json())
+        .then(data => setFoods(data));
+    }, [])
 
     useEffect(() => {
         const saveCart = getDatabaseCart();
         const foodKeys = Object.keys(saveCart);
-        const existingFood = foodKeys.map(existingKey => {
-            const food = fakeData.find(fd => fd.key === existingKey);
-            food.quantity = saveCart[existingKey];
-            return food;
-        })
-        setFoods(existingFood);
-    },[])
+        if(foods.length > 0){
+            const existingFood = foodKeys.map(existingKey => {
+                const food = foods.find(fd => fd.key === existingKey);
+                food.quantity = saveCart[existingKey];
+                return food;
+            })
+            setCart(existingFood);
+        }
+    },[foods])
 
     return (
         <div className="container margin-top">
@@ -32,7 +38,7 @@ const CheckOut = () => {
                 </div>
                 <div className="cart-container col-md-6">
                    {
-                     <Cart foods={foods}></Cart>
+                     <Cart cart={cart}></Cart>
                    }
                 </div>
 
