@@ -15,7 +15,7 @@ const FoodDetail = () => {
         fetch('http://localhost:4200/food/'+ foodKey)
         .then(res => res.json())
         .then(data => setFood(data))
-    }, [])
+    }, [foodKey])
 
     if(food){
         var {img, category, price} = food;
