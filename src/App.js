@@ -33,15 +33,18 @@ function App() {
 					<Switch>
 						<Route path='/breakfast'>
 							<BreakfastStore></BreakfastStore>
+							<AboutUs></AboutUs>
 						</Route>
 						<Route path='/lunch'>
 							<LunchStore></LunchStore>
+							<AboutUs></AboutUs>
 						</Route>
 						<Route exact path='/'>
 							<LunchStore></LunchStore>
 						</Route>
 						<Route path='/dinner'>
 							<DinnerStore></DinnerStore>
+							<AboutUs></AboutUs>
 						</Route>
 						<Route path="/foodDetails/:foodKey">
 							<FoodDetail></FoodDetail>
@@ -59,7 +62,6 @@ function App() {
 							<NotFound></NotFound>
 						</Route>
 					</Switch>
-					<AboutUs></AboutUs>
 					<Footer></Footer>
 				</Router>
 			</AuthContextProvider>

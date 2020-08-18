@@ -28,7 +28,7 @@ const Form = () => {
             payment: payment
 		};
 
-		fetch('http://localhost:4200/placeOrder', {
+		fetch('https://blooming-meadow-56189.herokuapp.com/placeOrder', {
 			method: 'POST',
 			body: JSON.stringify(orderDetails),
 			headers: {

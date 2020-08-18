@@ -14,7 +14,7 @@ const Header = () => {
     const [foods, setFoods] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4200/foods')
+        fetch('https://blooming-meadow-56189.herokuapp.com/foods')
         .then(res => res.json())
         .then(data => setFoods(data))
     }, [])

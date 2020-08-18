@@ -12,7 +12,7 @@ const FoodDetail = () => {
     const [food, setFood] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:4200/food/'+ foodKey)
+        fetch('https://blooming-meadow-56189.herokuapp.com/food/'+ foodKey)
         .then(res => res.json())
         .then(data => setFood(data))
     }, [foodKey])
