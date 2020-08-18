@@ -29,7 +29,7 @@ const FoodDetail = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container my-5">
            <div className="row d-flex align-items-center">
                 <div className="col-md-6">
                     <h1>Light {category}</h1>

@@ -41,6 +41,7 @@ function App() {
 						</Route>
 						<Route exact path='/'>
 							<LunchStore></LunchStore>
+							<AboutUs></AboutUs>
 						</Route>
 						<Route path='/dinner'>
 							<DinnerStore></DinnerStore>

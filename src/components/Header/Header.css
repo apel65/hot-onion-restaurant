@@ -1,5 +1,7 @@
 .navbar {
+    margin-bottom: 3px;
     height: 70px;
+    box-shadow: 1px 1px 10px lightgray ;
 }
 
 .navbar-brand img{
@@ -112,6 +114,38 @@
     
     .ml-auto {
         padding-top: 1%;
+    }
+
+}
+
+@media (min-width: 368px) and (max-width: 545px) {
+    .navbar {
+        height: 5%;
+    }
+    
+    .navbar-brand img{
+        height: 35px;
+        margin-bottom: 5px;
+    }
+
+    .signUpBtn {
+        font-size: 18px;
+        border: none;
+        border-radius: 40px;
+        padding: 5px 15px;
+        color: white;
+    }
+    
+    .signInBtn {
+        font-size: 18px;
+        border: none;
+        border-radius: 40px;
+        padding: 5px 15px;
+        color: white;
+    }
+    
+    .ml-auto {
+        padding-top: 0%;
     }
 
 }

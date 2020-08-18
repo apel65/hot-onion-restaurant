@@ -1,7 +1,7 @@
 .banner-section {
     position: relative;
     background-image: url('../../Image/bannerbackground.png');
-    height: 100vh;
+    height: 400px;
 }
 
 .banner-text {
