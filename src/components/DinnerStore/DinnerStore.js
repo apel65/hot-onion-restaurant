@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Dinner from '../Dinner/Dinner';
 import CheckoutBtn from '../CheckoutBtn/CheckoutBtn';
 import { useEffect } from 'react';
+import FullPageLoader from '../FullPageLoader/FullPageLoader';
 
 const DinnerStore = () => {
     
@@ -17,8 +18,9 @@ const DinnerStore = () => {
     return (
         <div>
              <div className="container">
-                {
-                    dinner.map(dinner => <Dinner key={dinner.key} dinner={dinner}></Dinner>)
+                {foods.length > 0 ?
+                    dinner.map(dinner => <Dinner key={dinner.key} dinner={dinner}></Dinner>) :
+                    <FullPageLoader></FullPageLoader>
                 }
                 <div className="text-center">
                     <CheckoutBtn></CheckoutBtn>                  

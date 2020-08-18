@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import BreakFast from '../BreakFast/BreakFast';
 import './BreakfastStore.css';
 import CheckoutBtn from '../CheckoutBtn/CheckoutBtn';
+import FullPageLoader from '../FullPageLoader/FullPageLoader';
 
 const BreakfastStore = () => {
     const [foods, setFoods] = useState([]);
@@ -15,8 +16,9 @@ const BreakfastStore = () => {
     const breakfast = foods.filter(food => food.category === 'breakfast');
     return (
         <div className="container">
-            {
-                breakfast.map(breakfast => <BreakFast key={breakfast.key} breakfast={breakfast}></BreakFast>)
+            {foods.length > 0 ?
+                breakfast.map(breakfast => <BreakFast key={breakfast.key} breakfast={breakfast}></BreakFast>) :
+                <FullPageLoader></FullPageLoader>
             }
            <div className="text-center">
                 <CheckoutBtn></CheckoutBtn>

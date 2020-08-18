@@ -2,7 +2,6 @@ import React from 'react';
 import './LiveCart.css';
 import { removeFromDatabaseCart } from '../../utilities/databaseManager';
 
-
 const LiveCart = (props) => {
     const {img, name, price, quantity, key} = props.food;
 

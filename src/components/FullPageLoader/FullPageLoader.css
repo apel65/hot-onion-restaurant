@@ -1,0 +1,7 @@
+.loader-container {
+    background-color: #FFF;
+}
+
+.loader {
+    z-index: 1000;
+}

@@ -5,6 +5,7 @@ import { addToDatabaseCart } from '../../utilities/databaseManager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
+import FullPageLoader from '../FullPageLoader/FullPageLoader';
 
 
 const FoodDetail = () => {
@@ -25,7 +26,17 @@ const FoodDetail = () => {
     const handleAddFood = (product) => {
         let quantity = product.quantity = count;
         addToDatabaseCart(product.key, quantity)
-        window.location.reload();
+
+        //Show food Added message
+        const showMessage = document.getElementById('showMessage');
+            showMessage.style.display = 'block';
+        setTimeout(() => {
+            showMessage.style.display = 'none';
+        }, 4000)
+        //Page loaded After show food added message for update cart number
+        setTimeout(() => {
+            window.location.reload();
+        }, 5000)
     }
 
     return (
@@ -52,9 +63,13 @@ const FoodDetail = () => {
                         Add
                         </button>
                     }
+                    <p id="showMessage" className="text-danger mt-3 ml-5" style={{display:'none'}}>Food added successfully</p>
                 </div>
                 <div className="col-md-6">
-                    <img className="img-fluid w-100%" src={img} alt=""/>
+                    {food ?
+                        <img className="img-fluid w-100%" src={img} alt=""/> :
+                        <FullPageLoader></FullPageLoader>
+                    }
                 </div>
            </div>
         </div>

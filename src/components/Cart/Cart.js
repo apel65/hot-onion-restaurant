@@ -2,6 +2,7 @@ import React from 'react';
 import LiveCart from '../LiveCart/LiveCart';
 import './Cart.css';
 import { Link } from 'react-router-dom';
+import FullPageLoader from '../FullPageLoader/FullPageLoader';
 
 const Cart = (props) => {
 
@@ -37,8 +38,9 @@ const Cart = (props) => {
                 </p>
            </div>
            <div className="cart-middle">
-                {
-                    existingFood.map(fd => <LiveCart food={fd} key={fd.key}></LiveCart>)
+                { existingFood.length > 0 ?
+                    existingFood.map(fd => <LiveCart food={fd} key={fd.key}></LiveCart>) :
+                    <FullPageLoader></FullPageLoader>
                 }
             </div>
             <br/>
