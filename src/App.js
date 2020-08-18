@@ -18,6 +18,7 @@ import BannerSection from './components/BannerSection/BannerSection';
 import HeaderTwo from './components/HeaderTwo/HeaderTwo';
 import AboutUs from './components/AboutUs/AboutUs';
 import Footer from './components/Footer/Footer';
+import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 
 
 function App() {
@@ -50,6 +51,9 @@ function App() {
 						</PrivateRoute>
 						<Route path="/login">
 							<Login></Login>
+						</Route>
+						<Route path="/placeOrder">
+							<PlaceOrder></PlaceOrder>
 						</Route>
 						<Route path="*">
 							<NotFound></NotFound>

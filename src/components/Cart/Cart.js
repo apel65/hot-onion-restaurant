@@ -1,8 +1,10 @@
 import React from 'react';
 import LiveCart from '../LiveCart/LiveCart';
 import './Cart.css';
+import { Link } from 'react-router-dom';
 
 const Cart = (props) => {
+
     const existingFood = props.cart;
     
     const total = existingFood.reduce((total, fd) => total + fd.price * fd.quantity, 0);
@@ -61,7 +63,11 @@ const Cart = (props) => {
                         </tr>
                     </tbody>
                 </table>
-                <button className="place-order">Place Order</button>
+                <Link to="/placeOrder">
+                    { 
+                        <button className="place-order">Place Order</button>
+                    }
+                </Link>
             </div>
         </div>
     );

@@ -45,7 +45,7 @@ const Header = () => {
                         <ul className="list">
                             <li>
                                 <Link to="/checkout">
-                                <button type="button" className="btn btn-light">
+                                <button disabled = {navCart.length > 0 ? false : true} type="button" className="btn btn-light">
                                 <FontAwesomeIcon icon={faCartPlus}/> <span className="badge badge-light">{foodQuantity}</span>
                                 <span className="sr-only">unread messages</span>
                                 </button>
@@ -54,7 +54,7 @@ const Header = () => {
                             <li>
                                 {
                                     auth.user ? <span>{auth.user.name}</span>:
-                                    <a href="/login">Login</a>
+                                    <a className="loginBtn" href="/login">Login</a>
                                 }
                             </li>
                             <li>

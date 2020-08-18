@@ -23,7 +23,7 @@ const FoodDetail = () => {
 
     const [count, setCount] = useState(1);
     const handleAddFood = (product) => {
-        const quantity = product.quantity = count;
+        let quantity = product.quantity = count;
         addToDatabaseCart(product.key, quantity)
         window.location.reload();
     }
@@ -46,9 +46,12 @@ const FoodDetail = () => {
                         </div>
                     </div>
                     <br/>
-                    <button onClick={() => handleAddFood(food)} className="main-btn btn-danger">
+                    { food &&
+                        <button onClick={() => handleAddFood(food)} className="main-btn btn-danger">
                         <FontAwesomeIcon className="icon" icon={faCartPlus}/>
-                        Add</button>
+                        Add
+                        </button>
+                    }
                 </div>
                 <div className="col-md-6">
                     <img className="img-fluid w-100%" src={img} alt=""/>

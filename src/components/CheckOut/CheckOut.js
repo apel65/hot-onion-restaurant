@@ -9,7 +9,7 @@ import './CheckOut.css';
 const CheckOut = () => {
     const [cart, setCart] = useState([]);
     const [foods, setFoods] = useState([]);
-
+    
     useEffect(() => {
         fetch('http://localhost:4200/foods')
         .then(res => res.json())
@@ -32,14 +32,15 @@ const CheckOut = () => {
     return (
         <div className="container margin-top">
            <div className="row align-items-center">
-
                 <div className="form-container col-md-6">
                     <Form></Form>
                 </div>
                 <div className="cart-container col-md-6">
-                   {
-                     <Cart cart={cart}></Cart>
-                   }
+                  <div className="ml-5 pl-5">
+                        {
+                        <Cart cart={cart}></Cart>
+                        }
+                  </div>
                 </div>
 
            </div>

@@ -2,7 +2,6 @@
     position: relative;
     background-image: url('../../Image/bannerbackground.png');
     height: 100vh;
-    z-index: -5;
 }
 
 .banner-text {
