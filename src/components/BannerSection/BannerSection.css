@@ -24,3 +24,15 @@
 .input-group-append button {
     border-radius: 40px;
 }
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 545px) {
+    .banner-text h1 {
+        font-size: 25px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+}
