@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 const CheckoutBtn = () => {
     const [cart, setCart] = useState([]);
     const [food, setFood] = useState([]);
-
+    console.log(cart.length)
     useEffect(() => {
         fetch('https://blooming-meadow-56189.herokuapp.com/foods')
         .then(res => res.json())
@@ -28,15 +28,11 @@ const CheckoutBtn = () => {
         
     }, [food])
 
-    // const styleNoDrop = {
-    //     cursor: 'no-drop'
-    // }
-
     return (
         <div>
             <Link to="/checkout">
                 { 
-                    <button disabled = {cart.length > 0 ? false : true} className="check-btn">Checkout Your Food</button>
+                    <button disabled = {cart.length > 0 ? false : true} className={cart.length > 0 ? 'btn-checked' : 'btn-checked cursor '} >Checkout Your Food</button>
                 }
             </Link>
         </div>

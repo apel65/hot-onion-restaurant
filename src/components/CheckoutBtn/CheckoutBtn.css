@@ -16,3 +16,7 @@
     outline: none;
     border: none;
 }
+
+.cursor  {
+    cursor: no-drop !important;
+}
