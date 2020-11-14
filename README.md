@@ -1,14 +1,22 @@
-## hot-onion-restaurant
+# hot-onion-restaurant 
+![](https://i.imgur.com/961eT9Z.png)
 
-This is a hot onion restaurant website. It helps people supply food at any place very carefully. People can order 3 kinds of food from this website which that breakfast, lunch, and dinner.
+# [LIVE](https://hot-onion-restaurant1.web.app/)
 
-**The full website has been created using react js and also using the following languages**
+A full-stack MERN restaurant app. People can do order food from here and payment the food bill using an online payment system.
 
+### Features
+- 3 kinds of food - breakfast, lunch and dinner
+- Order food
+- Stripe payment system
+- Add and Remove option
+
+### Technology:
 - HTML
 - CSS
 - JavaScript
 - BootStrap
 - React
-- Node
-- Express js
+- Node.js
+- Express.js
 - MongoDB Atlas
